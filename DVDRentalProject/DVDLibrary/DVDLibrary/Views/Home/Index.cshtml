@@ -1,0 +1,37 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div>
+    <h1>DVD Library</h1>
+</div>
+
+<div>
+    <table>
+        <tr>
+            <th>
+                <b>Title</b>
+            </th>
+            <th>
+                <b>Director</b>
+            </th>
+        </tr>
+        @foreach (var movie in ViewBag.Movies)
+            {
+            <tr>
+                <td>
+                    @movie.Title
+                </td>
+                <td>
+                    @movie.Director
+                </td>
+                <td>
+                    <form action="~/Home/DeleteMovie" method="post">
+                        <input type="hidden" value="@movie.MovieID" name="ID" />
+                        <input type="submit" value="Delete" />
+                    </form>
+                </td>
+            </tr>
+        }
+    </table>
+</div>

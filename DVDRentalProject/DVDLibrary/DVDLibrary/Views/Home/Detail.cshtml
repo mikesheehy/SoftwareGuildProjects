@@ -1,0 +1,41 @@
+﻿ @{
+    ViewBag.Title = "Library Details";
+}
+<h2>@ViewBag.Title.</h2>
+<h3>@ViewBag.Message</h3>
+
+<div>
+    <table>
+        <tr>
+            <th>
+                <b>Borrowed By</b>
+            </th>
+            <th>
+                <b>Title</b>
+            </th>
+            <th>
+                <b>Checked Out</b>
+            </th>
+            <th>
+                <b>Checked In</b>
+            </th>
+        </tr>
+        @foreach (var borrow in ViewBag.Borrows)
+            {
+            <tr>
+                <td>
+                    @borrow.Borrower
+                </td>
+                <td>
+                    @borrow.Title
+                </td>
+                <td>
+                    @borrow.CheckedOut
+                </td>
+                <td>
+                    @borrow.CheckedIn
+                </td>
+            </tr>
+        }
+    </table>
+</div>

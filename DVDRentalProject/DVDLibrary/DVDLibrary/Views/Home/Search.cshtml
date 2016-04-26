@@ -1,0 +1,53 @@
+﻿
+@{
+    ViewBag.Title = "Search";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@model DVDLibrary.Models.Movie
+
+<h2>Search</h2>
+
+@using (Html.BeginForm())
+{
+    <p>
+        Search: @Html.TextBox("searchString") <br />
+        <input type="submit" value="Submit" />
+    </p>
+} 
+
+
+<div>
+    @if (ViewBag.Movies != null)
+        {
+    <table>
+        <tr>
+            <th>
+                <b>Title</b>
+            </th>
+            <th>
+                <b>Director</b>
+            </th>
+        </tr>
+        @foreach (var movie in ViewBag.Movies)
+            {
+            <tr>
+                <td>
+                    @movie.Title
+                </td>
+                <td>
+                    @movie.Director
+                </td>
+                <td>
+                    @Ajax.ActionLink("See Details", "Movie", (DVDLibrary.Models.Movie)movie, new AjaxOptions { UpdateTargetId = "detailField" })
+                </td>
+            </tr>
+        }
+    </table>
+    }
+</div>
+
+
+<div id="detailField">
+    
+</div>
