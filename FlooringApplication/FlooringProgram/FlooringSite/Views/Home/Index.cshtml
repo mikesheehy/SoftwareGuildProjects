@@ -1,0 +1,27 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <h1>Flooring Main Menu</h1>
+    <p class="lead">This app is intended to add, display, edit, and remove flooring orders</p>
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+        <h2>Display Order</h2>
+        <p>@Html.ActionLink("Display past orders here", "Display", "Home")</p>
+    </div>
+    <div class="col-md-4">
+        <h2>Add Order</h2>
+        <p>@Html.ActionLink("Create a new order here", "Add", "Home")</p>
+    </div>
+    <div class="col-md-4">
+    <h2>Edit Order</h2>
+    <p>@Html.ActionLink("Edit your orders here", "Edit", "Home")</p>
+    </div>
+    <div class="col-md-4">
+    <h2>Delete Order</h2>
+    <p>@Html.ActionLink("Remove a previous order here", "Delete", "Home")</p>
+</div>
+</div>

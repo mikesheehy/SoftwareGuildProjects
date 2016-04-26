@@ -1,0 +1,19 @@
+﻿@{
+    ViewBag.Title = "Add";
+}
+
+<h2>Add</h2>
+<h3>@Html.ActionLink("Back to List", "Index", "Home")</h3>
+
+    <form action="/Home/AddOrder" method="post" id="">
+        Name: <input type="text" value="CustomerName" /><br />
+        State: <input type="text" value="State" /><br />
+        Product Type: <input type="text" value="ProductType" /><br />
+        Area: <input type="number" value="Area" /><br />
+        <button>Find Order</button>
+
+        
+
+    </form>
+
+

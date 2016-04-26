@@ -1,0 +1,25 @@
+﻿@model FlooringProgram.Models.Order
+
+@{
+    ViewBag.Title = "Display";
+
+}
+    <h2>Display</h2>
+    <h3>@Html.ActionLink("Back to List", "Index", "Home")</h3>
+
+    <p>Enter the date of the order</p>
+    
+    <form action="/Home/EditContact" method="get" id="">
+    Enter the order date: (03/17/2016) <input type="text" value="OrderDate"/><br />
+    Enter the order number: <input type="number" value="OrderNumber"/><br />
+        <button>Find Order</button>
+
+
+    </form>
+
+
+
+
+
+
+
